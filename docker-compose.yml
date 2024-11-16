@@ -1,0 +1,13 @@
+services:
+
+  digitaltolk:
+    container_name: digitaltolk
+    image: digitaltolk
+    build:
+      context: .
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    volumes:
+      - ./src:/app/src
+    env_file:
+      - .env
