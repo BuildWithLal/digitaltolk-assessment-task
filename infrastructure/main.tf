@@ -13,17 +13,17 @@ provider "aws" {
 }
 
 
-resource "aws_key_pair" "basion_key_pair" {
-  key_name   = var.basion_key_pair_name
-  public_key = file(var.basion_key_pair_public_key)  # The public key to associate with the EC2 instance
+resource "aws_key_pair" "bastion_key_pair" {
+  key_name   = var.bastion_key_pair_name
+  public_key = file(var.bastion_key_pair_public_key)  # The public key to associate with the EC2 instance
 }
 
 resource "aws_instance" "bastion_instance" {
-  ami           = var.basion_ami_id
-  instance_type = var.basion_instance_type
+  ami           = var.bastion_ami_id
+  instance_type = var.bastion_instance_type
   subnet_id     = var.public_subnet_id
 
-  key_name = aws_key_pair.basion_key_pair.key_name
+  key_name = aws_key_pair.bastion_key_pair.key_name
 
   vpc_security_group_ids = [aws_security_group.bastion_sg.id]
 

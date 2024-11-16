@@ -4,23 +4,23 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "basion_ami_id" {
+variable "bastion_ami_id" {
   description = "AMI ID for the Bastion Host"
   type        = string
 }
 
-variable "basion_instance_type" {
+variable "bastion_instance_type" {
   description = "EC2 instance type for the Bastion Host"
   type        = string
   default     = "t2.micro"
 }
 
-variable "basion_key_pair_name" {
+variable "bastion_key_pair_name" {
   description = "Key pair name for SSH access"
   type        = string
 }
 
-variable "basion_key_pair_public_key" {
+variable "bastion_key_pair_public_key" {
   description = "Public SSH key to associate with the EC2 instance"
   type        = string
 }
