@@ -29,14 +29,22 @@ cd digitaltolk-assessment-task
 
 <br/>
 
-3. Preview the resources to be created
+3. Update VPC and Subnet IDs in `Infrastructure/terraform.tfvars`
+   ```bash
+   vpc_id = "vpc-***********"
+   public_subnet_id = "subnet-*********"
+   ```
+
+<br/>
+
+4. Preview the resources to be created
    ```bash
    terraform plan
    ```
 
 <br/>
 
-4. Apply the configuration to create the AWS resources:
+5. Apply the configuration to create the AWS resources:
    ```bash
    terraform apply
    ```
@@ -46,7 +54,7 @@ cd digitaltolk-assessment-task
 
 <br/>
 
-5. SSH into Bastion Instance
+6. SSH into Bastion Instance
     ```bash
     ssh ubuntu@{OUTPUT_IP_FROM_TERRAFORM_APPLY}
     ```
