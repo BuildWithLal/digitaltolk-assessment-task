@@ -5,13 +5,13 @@
 
 1. Clone the Repository
 
-```bash
-git clone https://github.com/BuildWithLal/digitaltolk-assessment-task.git
-```
-
-```bash
-cd digitaltolk-assessment-task
-```
+   ```bash
+   git clone https://github.com/BuildWithLal/digitaltolk-assessment-task.git
+   ```
+   
+   ```bash
+   cd digitaltolk-assessment-task
+   ```
 
 <br/>
 
@@ -64,6 +64,7 @@ cd digitaltolk-assessment-task
 #### Set Up the FastAPI Application
 
 Navigate to the root directory and run
+
    ```bash
    docker compose up
    ```
@@ -79,6 +80,7 @@ To avoid unnecessary AWS charges and Resource consumption on local machine, clea
 <br/>
 
 Navigate back to the Infrastructure directory
+
    ```bash
    cd infrastructure
    ```
@@ -101,7 +103,7 @@ Press **CTRL + C** to stop the FastAPI application
 <br/>
 
 Remove container and other resources
-```bash
-docker compose down
-```
+   ```bash
+   docker compose down
+   ```
 
